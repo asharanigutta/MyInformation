@@ -1,0 +1,84 @@
+<section class="intro">
+  <div class="bg-image h-100"
+    style="background-image: url('https://mdbootstrap.com/img/Photos/new-templates/search-box/img4.jpg');">
+    <div class="mask d-flex align-items-center h-100" style="background-color: rgba(255,255,255,.6);">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div class="col-lg-10">
+              <div class="card gradient-custom" style="border-radius: 1rem;">
+                <div class="card-body p-5 text-white">
+  
+                  <div class="my-md-5">
+  
+                    <div class="text-center pt-1">
+                      <i class="fas fa-user-astronaut fa-3x"></i>
+                      <h1 class="fw-bold my-5 text-uppercase">Fill Up The Details</h1>
+                    </div>
+  
+                    <form #myInfo="ngForm" [formGroup]="myInformationForm" class="form">
+                      <div class="row form-group">
+  
+                        <mat-form-field appearance="outline">
+                          <mat-label>First Name</mat-label>
+                          <input matInput placeholder="Placeholder" formControlName="firstName">
+  
+                        </mat-form-field>
+  
+  
+                      </div>
+                      <div class="row form-group">
+                        <mat-form-field appearance="outline">
+                          <mat-label>Last Name</mat-label>
+                          <input matInput placeholder="Placeholder" formControlName="lastName">
+  
+                        </mat-form-field>
+                      </div>
+  
+                      <div class="row form-group">
+                        <mat-form-field appearance="outline">
+                          <mat-label>Email</mat-label>
+                          <input matInput placeholder="Placeholder" formControlName="email">
+  
+                        </mat-form-field>
+                      </div>
+                      <div class="row form-group">
+                        <mat-form-field appearance="outline">
+                          <mat-label>Hobbies</mat-label>
+                          <textarea matInput placeholder="Placeholder" formControlName="hobbies"></textarea>
+  
+                        </mat-form-field>
+                      </div>
+                    </form>
+  
+  
+  
+                    <div class="text-center py-5">
+                      <button class="btn btn-light btn-lg btn-rounded px-5" type="submit" (click)="onSaveInformation()">Save</button>
+                    </div>
+  
+                  </div>
+  
+                  
+  
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2">
+             
+                <mat-card>
+        
+                  <div *ngFor="let h of myHobbies;let i=index">
+                    {{i+1}}. {{h.hobby}}
+                  </div>
+                
+                </mat-card>
+             
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
